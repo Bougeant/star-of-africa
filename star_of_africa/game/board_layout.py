@@ -1,8 +1,10 @@
+from pathlib import Path
+
 import pygame
 
-from game.cities import CITIES
-from game.players import Player
-from game.roads import AIRPORTS, BOATS, ROADS
+from star_of_africa.game.cities import CITIES
+from star_of_africa.game.players import Player
+from star_of_africa.game.roads import AIRPORTS, BOATS, ROADS
 
 
 class BoardLayout:
@@ -13,7 +15,7 @@ class BoardLayout:
 
     def initialize_layout(self) -> None:
         """ """
-        self.display_background("./images/background.png")
+        self.display_background("images/background.png")
         self.display_cities()
         self.display_paths(BOATS)
         self.display_paths(ROADS)
@@ -22,7 +24,8 @@ class BoardLayout:
 
     def display_background(self, path: str) -> None:
         """ """
-        background = pygame.image.load(path)
+        abs_path = Path(__package__.split(".")[0]) / path
+        background = pygame.image.load(abs_path)
         background = pygame.transform.scale(background, (self.res_x, self.res_y))
         self.screen.blit(background, (0, 0))
 

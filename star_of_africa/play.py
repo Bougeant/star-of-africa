@@ -2,7 +2,7 @@ import sys
 
 import pygame
 
-from game.board_layout import BoardLayout
+from star_of_africa.game.board_layout import BoardLayout
 
 pygame.init()
 

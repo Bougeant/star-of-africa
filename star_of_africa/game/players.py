@@ -1,7 +1,7 @@
 import pygame
 from pygame.sprite import Group, Sprite
 
-from game.cities import ALL_CITIES
+from star_of_africa.game.cities import ALL_CITIES
 
 
 class Player(Sprite):
