@@ -1,5 +1,5 @@
 import pygame
-from pygame.sprite import Group, Sprite
+from pygame.sprite import Sprite
 
 from star_of_africa.game.cities import ALL_CITIES
 
